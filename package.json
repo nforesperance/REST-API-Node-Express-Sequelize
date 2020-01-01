@@ -1,0 +1,24 @@
+{
+  "name": "rest-api-node-express-sequelise",
+  "version": "1.0.0",
+  "description": "A Rest API with node, express and sequelise",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartNfor/REST-API-Node-Express-Sequelise.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Sequelise"
+  ],
+  "author": "Nfor Esperance",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmartNfor/REST-API-Node-Express-Sequelise/issues"
+  },
+  "homepage": "https://github.com/SmartNfor/REST-API-Node-Express-Sequelise#readme"
+}
