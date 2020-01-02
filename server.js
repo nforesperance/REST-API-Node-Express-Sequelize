@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const sequelize = require('./config/database');
+const sequelize = require('./config').sequelize;
+const Dev = require('./config').Dev;
+
 
 
 const app = express();
@@ -10,10 +12,13 @@ app.use(express.json());
 
 
 // Database
-const db = require('./config/database');
+const db = require('./config').sequelize;
 
 // synchronizing Models with Database
-sequelize.sync();
+if(Dev){
+  sequelize.sync({alter: true});
+}
+
 // Test DB
 db.authenticate()
   .then(() => console.log('Database connected...'))
