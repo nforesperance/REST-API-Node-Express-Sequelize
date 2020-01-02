@@ -4,20 +4,20 @@ const Model = Sequelize.Model;
 
 class Author extends Model {}
 Author.init({
-  author_id: { type: Sequelize.INTEGER,autoIncrement:true,primaryKey: true},
+  id: { type: Sequelize.INTEGER,autoIncrement:true,primaryKey: true},
   name: { type: Sequelize.TEXT, allowNull: false},
   address: { type: Sequelize.TEXT, defaultValue: "melen" },
 }, { sequelize, modelName: 'Author',timestamps:false });
 
 class Book extends Model {}
 Book.init({
-  book_id: { type: Sequelize.INTEGER, allowNull: false,primaryKey: true},
+  id: { type: Sequelize.INTEGER, allowNull: false,primaryKey: true},
   title: { type: Sequelize.TEXT, allowNull: false},
 }, { sequelize, modelName: 'Book',timestamps:false });
 
 class Article extends Model {}
 Article.init({
-  article_id: { type: Sequelize.INTEGER, allowNull: false,primaryKey: true},
+  id: { type: Sequelize.INTEGER, allowNull: false,primaryKey: true},
   name: Sequelize.STRING,
   address: Sequelize.TEXT
 }, { sequelize, modelName: 'Article',timestamps:false });
